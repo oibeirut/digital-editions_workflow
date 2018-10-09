@@ -243,135 +243,141 @@ Beispiel:
 + Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html>
 	
 ## Gliedernde Querstriche
-	+ Da Querstriche ein graphisches Element sind, könnten sie als `<graphic>` getaggt werden.
+	
++ Da Querstriche ein graphisches Element sind, könnten sie als `<graphic>` getaggt werden.
 
 ## Highlight (z.B. bei Überschriften oder farbig)
-	+ `<hi rend="gothic">`And this Indenture further witnesseth`</hi>`
-that the said `<hi rend="italic">`Walter Shandy`</hi>`, merchant,
-in consideration of the said intended marriage ...
-	+ indered a man's proceedings who `<hi rend="underline">`had obtained all the letters to Mr Boyd`</hi>`
 
-	+ Beispiel @rendition:
++ `<hi rend="gothic">`And this Indenture further witnesseth`</hi>` that the said `<hi rend="italic">`Walter Shandy`</hi>`, merchant, in consideration of the said intended marriage ... indered a man's proceedings who `<hi rend="underline">`had obtained all the letters to Mr Boyd`</hi>`
+
++ Beispiel `@rendition`:
 	 
-		```xml
-			<head rendition="#ac #sc">
-				<lb/>To The <lb/>Duchesse <lb/>of <lb/>Newcastle, <lb/>On Her<lb/>
-				<hi rendition="#normal">New Blazing-World</hi>.
-			</head>
-			<!-- elsewhere... -->
-			<rendition xml:id="sc" scheme="css">font-variant: small-caps</rendition>
-			<rendition xml:id="normal" scheme="css">font-variant: normal</rendition>
-			<rendition xml:id="ac" scheme="css">text-align: center</rendition>
-			<rendition xml:id="red">color: red;</rendition>
-		```
+```xml
+	<head rendition="#ac #sc">
+		<lb/>To The <lb/>Duchesse <lb/>of <lb/>Newcastle, <lb/>On Her<lb/>
+		<hi rendition="#normal">New Blazing-World</hi>.
+	</head>
+	<!-- elsewhere... -->
+	<rendition xml:id="sc" scheme="css">font-variant: small-caps</rendition>
+	<rendition xml:id="normal" scheme="css">font-variant: normal</rendition>
+	<rendition xml:id="ac" scheme="css">text-align: center</rendition>
+	<rendition xml:id="red">color: red;</rendition>
+```
 	
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html>
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html>
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html>
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-hi.html>
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html>
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html>
 
 ## Fußnoten
 
-	Beispiel:
+Beispiel:
+
+	```xml
+	<l>(Diff'rent our parties, but with equal grace</l>
+	<l>The Goddess smiles on Whig and Tory race,</l>
+	<l>
+		<note type="imitation" place="bottom" anchored="false">
+			<bibl>Virg. Æn. 10.</bibl>
+			<quote>
+				<l>Tros Rutulusve fuat; nullo discrimine habebo.</l>
+				<l>—— Rex Jupiter omnibus idem.</l>
+			</quote>
+		</note>'Tis the same rope at sev'ral ends they twist,
+	</l>
+	```
+
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html>
+
+
+# 3. Editorische Eingriffe
+
+## Seiten fehlen: 
+
+Fehlende Passagen werden mit `<gap resp=""/>` markiert. Der Grund für das Fehlen kann mit einem Attribut markiert werden.
+
+## Verbesserungen und Streichungen 
+
+
+In unserem Beispieltext wurden Verbesserungen und Streichungen durch den ursprünglichen Autor der Handschrift meist: mit \<verbessert in\> [ursprünglich] angeben.
 	
-		```xml
-		<l>(Diff'rent our parties, but with equal grace</l>
-		<l>The Goddess smiles on Whig and Tory race,</l>
-		<l>
-			<note type="imitation" place="bottom" anchored="false">
-				<bibl>Virg. Æn. 10.</bibl>
-				<quote>
-					<l>Tros Rutulusve fuat; nullo discrimine habebo.</l>
-					<l>—— Rex Jupiter omnibus idem.</l>
-				</quote>
-			</note>'Tis the same rope at sev'ral ends they twist,
-		</l>
-		```
-	
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html>
++ Streichungen
 
+Beispiel:
 
-## 3. Editorische Eingriffe
+```xml
+<l>
+	<del rend="overtyped">Mein</del> Frisch
+	<del rend="overstrike" type="primary">schwebt</del> weht der Wind
+</l>
+```
 
-## Seiten fehlen: `<gap resp=""/>`
-## Verbesserungen und Streichungen (meist: \<verbessert in> [ursprünglich])
-	+ Streichungen
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html>
++ Hinzufügungen: `<add>`
 
-	Beispiel:
-	
-		```xml
-		<l>
-			<del rend="overtyped">Mein</del> Frisch
-			<del rend="overstrike" type="primary">schwebt</del> weht der Wind
-		</l>
-		```
-	
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html>
-	+ Hinzufügungen: `<add>`
+Beispiel:
 
-	Beispiel:
-	
-		```xml
-		<l>
-			<del rend="overtyped">Mein</del> <add>Frisch</add>
-			<del rend="overstrike" type="primary">schwebt</del> <add>weht</add> der Wind
-		</l>
-		```
+```xml
+<l>
+	<del rend="overtyped">Mein</del> <add>Frisch</add>
+	<del rend="overstrike" type="primary">schwebt</del> <add>weht</add> der Wind
+</l>
+```
 
-	+ Beides zusammen lässt sich noch in ein `<choice>` element verpacken.
++ Beides zusammen lässt sich noch in ein `<choice>` element verpacken.
 
-	Beispiel:
-	
-		```xml
-		<l>
-			<del rend="overtyped">Mein</del> <add>Frisch</add>
-			<choice><del rend="overstrike" type="primary">schwebt</del> <add>weht</add></choice> der Wind
-		</l>
-		```
+Beispiel:
 
-## 4. Named entities: Daten, Namen, Personen, Orte
+```xml
+<l>
+	<del rend="overtyped">Mein</del> <add>Frisch</add>
+	<choice><del rend="overstrike" type="primary">schwebt</del> <add>weht</add></choice> der Wind
+</l>
+```
+
+# 4. Named entities: Daten, Namen, Personen, Orte
 
 ## Datum als Datum markieren (egal ob Chronogram)
-	+ `<date when="1807-06-09">`June 9th`</date>`
-	+ `<residence from="1856-03" to="1858-04">`From sometime in March of
- 1856 to sometime in April of 1858.`</residence>`
- 	+ `<birth notBefore="1857-03-01"
- notAfter="1857-04-30">`Some time in
- March or April of 1857.`</birth>`
- 	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html>
- 	+ Für nicht-gregorianische Kalender siehe die Dokumentation von [OpenArabicPE](https://www.github.com/openarabicpe) bzw. [Digital Muqtabas](https://www.github.com/tillgraller/digital-muqtabas)
+
++ `<date when="1807-06-09">`June 9th`</date>`
++ `<residence from="1856-03" to="1858-04">`From sometime in March of 1856 to sometime in April of 1858.`</residence>`
++ `<birth notBefore="1857-03-01" notAfter="1857-04-30">`Some time in March or April of 1857.`</birth>`
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html>
++ Für nicht-gregorianische Kalender siehe die Dokumentation von [OpenArabicPE](https://www.github.com/openarabicpe) bzw. [Digital Muqtabas](https://www.github.com/tillgraller/digital-muqtabas)
 
 ## Personen
-	+ That silly man
-`<name role="politician" type="person">`David Paul Brown`</name>` has suffered ...
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html> 
+
++ That silly man `<persName>`David Paul Brown`</persName>` has suffered ...
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html> 
 
 ## Orte (auch Regionen usw.)
-	+ I never fly from `<name key="LHR" type="place">`Heathrow Airport`</name>`
-to
-<name key="FR" type="place">France</name>
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html> 
+
++ I never fly from `<name key="LHR" type="place">`Heathrow Airport`</name>` to `<placName type="place">`France`</placeName>`
+
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html> 
 
 ## Namen
-	+ `<persName>`
-	+ `<surname>`
-	+ `<forename>`
-	+ `<roleName>`
-	+ `<addName>`
-	+ `<nameLink>`
-	+ `<genName>`
-	
-	Bsp:
-	
-		```xml
-		<persName>
-			<forename type="first">Franklin</forename>
-			<forename type="middle">Delano</forename>
-			<surname>Roosevelt</surname>
-		</persName>
-		```
-	 
-	+ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html>
+
++ `<persName>`
++ `<surname>`
++ `<forename>`
++ `<roleName>`
++ `<addName>`
++ `<nameLink>`
++ `<genName>`
+
+Bsp:
+
+```xml
+<persName>
+	<forename type="first">Franklin</forename>
+	<forename type="middle">Delano</forename>
+	<surname>Roosevelt</surname>
+</persName>
+```
+
++ Siehe: <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html>
 	
 ## Gruppen von Leuten (z.B. Wenn oft Leute auf dem Markt)
-	+ `<orgName>`
+
++ `<orgName>`
 
