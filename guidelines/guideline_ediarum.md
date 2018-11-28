@@ -106,9 +106,10 @@ This is the basic Java file to enable Ediarum functions in oXygen. It needs to b
 1. work from a fork of "ediarum.BASE.edit": [ediarum.BI](https://github.com/oibeirut/ediarum.BI)
     - association rules need to be changed to [our schema](https://github.com/oibeirut/oibeirut_odd)
     - the CSS has been changed to load a specific font for Arabic material etc. 
-1. translation of the interface from German into English: `ediarum.BI.framework`
+2. translation of the interface from German into English: `ediarum.BI.framework`
     - all settings are maintained in an oXygen `.framework`, which is just an XML file and can be edited thus (which is easier than through the oXygen settings pane).
     - these files do not allow for multilingual versions, but one can easily produce one, using `@xml:lang` on all nodes and then compiling a monolingual version via XSLT.
-
-3. selection of phenomena to be presented in the mark-up
-4. adaptation to the mark-up of our authority files
+3. adapt CSS to needs of Arabic script
+    - one can assign fonts on the basis of `@xml:lang` values. I have currently opted for the AmiriWeb font for Arabic script, which mimicks early twentieth-century typefaces from Bulāq. However, rendering of AmiriWeb is extremely slow in oXygen.
+4. selection of phenomena to be presented in the mark-up
+5. adaptation to the mark-up of our authority files
