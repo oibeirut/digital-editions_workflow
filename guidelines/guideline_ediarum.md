@@ -33,6 +33,8 @@ I am in contact with oXygen support over this matter but in the meantime the onl
 - users:
     + admin: OIB_goes_digital
 
+- web interface: <http://localhost:8080/exist/apps/dashboard/>
+
 ### installation
 
 Did work without a glitch on both my private and work Macs
@@ -46,6 +48,8 @@ I followed the basic steps in this [eXist tutorial](https://exist-db.org/exist/a
 ##  3.1 [ediarum.DB](https://github.com/ediarum/ediarum.DB)
 
 This is the first component of ediarum that needs installing. It will configure the local eXistDB. It worked without a glitch.
+
+- web interface: <http://localhost:8080/exist/apps/ediarum/>
 
 ### Installation
 
@@ -84,7 +88,8 @@ Since development has moved to GitHub, one should clone [ediarum.BASE.edit](http
 
 #### Set-up
 
-ediarum.BASE.edit was developped in the context of the Schleiermacher Briefedition and it comes with certain settings that prevent a display of buttons etc. if your files do not conform to the specificities of the Schleiermacher project. These settings can be found in `Oxygen > Settings > Document Type Association > ediarum.BASE.edit > Association rules`
+- ediarum.BASE.edit was developped in the context of the Schleiermacher Briefedition and it comes with certain settings that prevent a display of buttons etc. if your files do not conform to the specificities of the Schleiermacher project. These settings can be found in `Oxygen > Settings > Document Type Association > ediarum.BASE.edit > Association rules`
+- in order to display tool
 
 #### depreciated method
 
@@ -100,6 +105,26 @@ Since development has moved to GitHub, one should clone [ediarum.REGISTER.edit](
 ### 3.2.3 [ediarum.JAR](https://github.com/ediarum/ediarum.JAR)
 
 This is the basic Java file to enable Ediarum functions in oXygen. It needs to be present in every Ediarum framework one wants to set up and is also part of `ediarum.BASE.edit`.
+
+### set-up authority files
+
+The ediarum [web GUI](http://localhost:8080/exist/apps/ediarum/) provides two ways of setting up authority files (de: Register).
+
+1. Generate a new authority file: "Ediarum Register"
+
+    The options are pretty self-explanatory (although in German). One can set up
+
+    - Personenregister
+        + path: `Register/Personen.xml`
+    - Ortsregister
+        + path: `Register/Orte.xml`
+    - Sachbegriffe
+    - Körperschaftsregister
+    - Werkregister
+    - Briefregister
+    - Anmerkungsregister
+    
+2. Access existing registers: "Register verfügbar machen"
 
 # Adaptation to OIB's needs
 
