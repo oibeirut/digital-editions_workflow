@@ -61,6 +61,10 @@ The relevant `ediarum.xar` can be found in `ediarum.DB/release/`. Use the latest
 
 ### Configuration
 
+#### authority files / registers/ indexes
+
+
+
 ## 3.2 Ediarum add-on / framework for oXygen
 
 I have successfully tried installing the Ediarum frameworks following the steps below in oXygen 19.1 and 20.1 on macOS. It really only needs to be copied into the relevant folders. 
