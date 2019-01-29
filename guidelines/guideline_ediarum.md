@@ -1,7 +1,7 @@
 ---
 title: "Ediarum@OIB"
 author: Till Grallert
-date: 2018-11-28 09:50:05 +0200
+date: 2018-12-18
 ---
 
 # Components and installation
@@ -13,16 +13,16 @@ date: 2018-11-28 09:50:05 +0200
     2. [ediarum.BASE.edit](https://github.com/ediarum/ediarum.BASE.edit)
     3. [ediarum.REGISTER.edit](https://github.com/ediarum/ediarum.REGISTER.edit)
     4. [ediarum.JAR](https://github.com/ediarum/ediarum.JAR): this is the basic component of and included in "ediarum.BASE.edit" and "ediarum.REGISTER.edit"
- 
+
 ## 1. [oXygen XML editor](https://www.oxygenxml.com/download_oxygenxml_editor.html)
 
 - tested with:
     + v19.1
     + v20.1
-    
+
 ### v20.1
 
-It is important to change the standard font settings for the Editor and the "Author" view to some font that supports Arabic script. Somehow standard Unicode fonts do not work! Since version 15, I used Helvetica Neue (13) for the Editor and Gentium Plus (14) for the Author view. Neither works with Arabic in v20.1. 
+It is important to change the standard font settings for the Editor and the "Author" view to some font that supports Arabic script. Somehow standard Unicode fonts do not work! Since version 15, I used Helvetica Neue (13) for the Editor and Gentium Plus (14) for the Author view. Neither works with Arabic in v20.1.
 
 I am in contact with oXygen support over this matter but in the meantime the only font that somewhat works properly for Arabic is Lucida Sans, which however, does NOT include all necessary code points for IJMES transliteration of Arabic.
 
@@ -71,7 +71,7 @@ The relevant `ediarum.xar` can be found in `ediarum.DB/release/`. Use the latest
 
 ## 3.2 Ediarum add-on / framework for oXygen
 
-I have successfully tried installing the Ediarum frameworks following the steps below in oXygen 19.1 and 20.1 on macOS. It really only needs to be copied into the relevant folders. 
+I have successfully tried installing the Ediarum frameworks following the steps below in oXygen 19.1 and 20.1 on macOS. It really only needs to be copied into the relevant folders.
 
 ### 3.2.1 [ediarum.BASE.edit](https://github.com/ediarum/ediarum.BASE.edit)
 #### Description:
@@ -127,14 +127,14 @@ The ediarum [web GUI](http://localhost:8080/exist/apps/ediarum/) provides two wa
     - Werkregister
     - Briefregister
     - Anmerkungsregister
-    
+
 2. Access existing registers: "Register verfügbar machen"
 
 # Adaptation to OIB's needs
 
 1. work from a fork of "ediarum.BASE.edit": [ediarum.BI](https://github.com/oibeirut/ediarum.BI)
     - association rules need to be changed to [our schema](https://github.com/oibeirut/oibeirut_odd)
-    - the CSS has been changed to load a specific font for Arabic material etc. 
+    - the CSS has been changed to load a specific font for Arabic material etc.
 2. translation of the interface from German into English: `ediarum.BI.framework`
     - all settings are maintained in an oXygen `.framework`, which is just an XML file and can be edited thus (which is easier than through the oXygen settings pane).
     - these files do not allow for multilingual versions, but one can easily produce one, using `@xml:lang` on all nodes and then compiling a monolingual version via XSLT.
