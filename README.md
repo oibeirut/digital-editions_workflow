@@ -1,7 +1,7 @@
 ---
 title: "digital-editions_workflow: readme"
 author: Till Grallert
-date: 2018-10-09 16:08:17 +0300
+date: 2020-03-13
 tags:
     - oib
     - digital editions
@@ -18,5 +18,8 @@ This repository contains documentation of and for the digital editing workflow a
 
 - [guidelines](guidelines/): human-readable guidelines including the automatically generated documentation of the ODD
 - [schemas](schemas/): TEI XML schemas written in ODD and their derivative XML schemas as `.rng`, `.rnc`, `.dtd` and `.sch`.
+    + *Still missing*
 - [templates](templates/): Microsoft Word templates (`.dotx`) to be used by the editors for BI publication projects
+    + *Missing due to copyright issues*
 - [workflow](workflow/): documentation of our workflows including charts and diagrams
+- [xslt](xslt/): XSLT stylesheets. Inter alia for mapping Word styles to TEI mark-up.
