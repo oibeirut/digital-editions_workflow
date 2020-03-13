@@ -18,5 +18,5 @@ This repository contains documentation of and for the digital editing workflow a
 
 - [guidelines](guidelines/): human-readable guidelines including the automatically generated documentation of the ODD
 - [schemas](schemas/): TEI XML schemas written in ODD and their derivative XML schemas as `.rng`, `.rnc`, `.dtd` and `.sch`.
-- [templates](templates/): Microsof Word templates (`.dotx`) to be used by the editors for BI publication projects
+- [templates](templates/): Microsoft Word templates (`.dotx`) to be used by the editors for BI publication projects
 - [workflow](workflow/): documentation of our workflows including charts and diagrams
